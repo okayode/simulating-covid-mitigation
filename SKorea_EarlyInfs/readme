@@ -1,0 +1,26 @@
+#############################################################################################
+#  How to run the code																		#
+#############################################################################################
+
+for job in 1 2 3 4 5 6 7 8 9 10; do python3 skorea_earlyinfs.py > output_${job}.txt; done
+
+#############################################################################################
+#  How to generate the txt files															#
+#############################################################################################
+
+
+cat *.txt | grep -e 'FirstBeta:' | cut -f 2- -d ' ' > beta1.txt
+cat *.txt | grep -e 'SecondBeta:' | cut -f 2- -d ' ' > beta2.txt
+cat *.txt | grep -e 'ThirdBeta:' | cut -f 2- -d ' ' > beta3.txt
+cat *.txt | grep -e 'FourthBeta:' | cut -f 2- -d ' ' > beta4.txt
+
+cat *.txt | grep -e 'FirstGamma:' | cut -f 2- -d ' ' > gamma1.txt
+cat *.txt | grep -e 'SecondGamma:' | cut -f 2- -d ' ' > gamma2.txt
+cat *.txt | grep -e 'ThirdGamma:' | cut -f 2- -d ' ' > gamma3.txt
+cat *.txt | grep -e 'FourthGamma:' | cut -f 2- -d ' ' > gamma4.txt
+
+cat *.txt | grep -e 'FirstMu:' | cut -f 2- -d ' ' > mu1.txt
+cat *.txt | grep -e 'SecondMu:' | cut -f 2- -d ' ' > mu2.txt
+cat *.txt | grep -e 'ThirdMu:' | cut -f 2- -d ' ' > mu3.txt
+cat *.txt | grep -e 'FourthMu:' | cut -f 2- -d ' ' > mu4.txt
+
