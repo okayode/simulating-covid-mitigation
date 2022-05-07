@@ -1,0 +1,25 @@
+#############################################################################################
+#  How to run the code																		#
+#############################################################################################
+
+for job in 1 2 3 4 5 6 7 8 9 10; do python3 italy_learn_params.py > output_${job}.txt; done
+
+#############################################################################################
+#  How to generate the txt files															#
+#############################################################################################
+
+
+cat output_1.txt | grep -e 'days' | cut -f 2- -d ' ' > days.txt
+cat output_1.txt | grep -e 'cases' | cut -f 2- -d ' ' > cases.txt
+cat output_1.txt | grep -e 'wellness' | cut -f 2- -d ' ' > wellness.txt
+cat *.txt | grep -e 'time' | cut -f 2- -d ' ' > time.txt
+cat *.txt | grep -e 'susceptible' | cut -f 2- -d ' ' > susceptible.txt
+cat *.txt | grep -e 'infectd' | cut -f 2- -d ' ' > infectd.txt
+cat *.txt | grep -e 'INFasymp' | cut -f 2- -d ' ' > INFasymp.txt
+cat *.txt | grep -e 'recoverd' | cut -f 2- -d ' ' > recoverd.txt
+cat *.txt | grep -e 'RECasymp' | cut -f 2- -d ' ' > RECasymp.txt
+cat *.txt | grep -e 'rmse_train_loss' | cut -f 2- -d ' ' > rmse_train_loss.txt
+cat *.txt | grep -e 'beta:' | cut -f 2- -d ' ' > beta.txt
+cat *.txt | grep -e 'gamma:' | cut -f 2- -d ' ' > gamma.txt
+cat *.txt | grep -e 'mu:' | cut -f 2- -d ' ' > mu.txt
+cat *.txt | grep -e 'xi:' | cut -f 2- -d ' ' > xi.txt
