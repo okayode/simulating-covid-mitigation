@@ -1,0 +1,38 @@
+#############################################################################################
+#  How to run the code																		#
+#############################################################################################
+
+for ((x=0; x<10;x++)); do sbatch -n 1 myJob.sh; done
+
+#############################################################################################
+#  How to generate the txt files															#
+#############################################################################################
+
+
+cat *.out | grep -e 'mseTrainLoss:' | cut -f 2- -d ' ' > epochsTrain.txt
+cat *.out | grep -e 'mseTestLoss:' | cut -f 2- -d ' ' > epochTest.txt
+
+cat *.out | grep -e 'mseTrainDepthA:' | cut -f 2- -d ' ' > DepthTrainA.txt
+cat *.out | grep -e 'mseTestDepthA:' | cut -f 2- -d ' ' > DepthtestA.txt
+cat *.out | grep -e 'mseTrainDepthB:' | cut -f 2- -d ' ' > DepthTrainB.txt
+cat *.out | grep -e 'mseTestDepthB:' | cut -f 2- -d ' ' > DepthtestB.txt
+cat *.out | grep -e 'mseTrainDepthC:' | cut -f 2- -d ' ' > DepthTrainC.txt
+cat *.out | grep -e 'mseTestDepthC:' | cut -f 2- -d ' ' > DepthtestC.txt
+cat *.out | grep -e 'mseTrainDepthD:' | cut -f 2- -d ' ' > DepthTrainD.txt
+cat *.out | grep -e 'mseTestDepthD:' | cut -f 2- -d ' ' > DepthtestD.txt
+cat *.out | grep -e 'mseTrainDepthE:' | cut -f 2- -d ' ' > DepthTrainE.txt
+cat *.out | grep -e 'mseTestDepthE:' | cut -f 2- -d ' ' > DepthtestE.txt
+cat *.out | grep -e 'mseTrainDepthF:' | cut -f 2- -d ' ' > DepthTrainF.txt
+cat *.out | grep -e 'mseTestDepthF:' | cut -f 2- -d ' ' > DepthtestF.txt
+
+cat *.out | grep -e 'mseTrainWidthA:' | cut -f 2- -d ' ' > WidthTrainA.txt
+cat *.out | grep -e 'mseTestWidthA:' | cut -f 2- -d ' ' > WidthtestA.txt
+cat *.out | grep -e 'mseTrainWidthB:' | cut -f 2- -d ' ' > WidthTrainB.txt
+cat *.out | grep -e 'mseTestWidthB:' | cut -f 2- -d ' ' > WidthtestB.txt
+cat *.out | grep -e 'mseTrainWidthC:' | cut -f 2- -d ' ' > WidthTrainC.txt
+cat *.out | grep -e 'mseTestWidthC:' | cut -f 2- -d ' ' > WidthtestC.txt
+cat *.out | grep -e 'mseTrainWidthD:' | cut -f 2- -d ' ' > WidthTrainD.txt
+cat *.out | grep -e 'mseTestWidthD:' | cut -f 2- -d ' ' > widthtestD.txt
+
+
+
